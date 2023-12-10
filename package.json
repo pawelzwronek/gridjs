@@ -110,6 +110,7 @@
     "build:plugins": "microbundle build --raw --cwd plugins/selection --tsconfig plugins/selection/tsconfig.release.json",
     "postbuild": "node build/node-13-exports.js",
     "prebuild:themes": "sass src/theme/mermaid/index.scss dist/theme/mermaid.css",
+    "prepare": "npm run build",
     "build:themes-dev": "postcss dist/theme/mermaid.css --output dist/theme/mermaid.css --env development --verbose",
     "build:themes-prod": "postcss dist/theme/mermaid.css --output dist/theme/mermaid.min.css --env production --verbose",
     "build:themes": "run-p build:themes-dev build:themes-prod",
